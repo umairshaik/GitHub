@@ -1,0 +1,50 @@
+package com.bil.ams;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+
+import com.bil.ams.customization.CustomDialog;
+import com.bil.ams.customization.CustomDialogInterface;
+
+public class LoginActivity extends Activity {
+
+	public CustomDialog mydialog;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_login);
+	}
+
+	// on exit button clicked give alert and exit application on user
+	// confirmation
+	public void onExitButtonClicked(View v) {
+		alertDialogForExit();
+	}
+
+	// alert for exiting application
+	private void alertDialogForExit() {
+		mydialog = new CustomDialog(this,
+				getString(R.string.do_you_want_to_exit), null,
+				getString(R.string.ok), getString(R.string.cancel),
+				new CustomDialogInterface() {
+
+					@Override
+					public void onPositiveButtonClick() {
+						// TODO Auto-generated method stub
+						finish();
+					}
+
+					@Override
+					public void onNegativeButtonClick() {
+						// TODO Auto-generated method stub
+						mydialog.dismiss();
+					}
+				});
+		mydialog.getWindow().setBackgroundDrawableResource(
+				android.R.color.transparent);
+		mydialog.show();
+
+	}
+}

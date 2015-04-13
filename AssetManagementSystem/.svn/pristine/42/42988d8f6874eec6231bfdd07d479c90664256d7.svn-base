@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- textview dimens -->
+    <dimen name="text_view_size">16sp</dimen>
+    
+    <!-- Button dimnes -->
+    <dimen name="horizontal_buttons_marigin_left">20dp</dimen>
+    
+    <!--  parent layout padding -->
+    <dimen name="parent_layout_padding">5dp</dimen>
+    
+    <!-- margin dimens -->
+    <dimen name="margin_top">20dp</dimen>
+    <dimen name="margin_bottom">10dp</dimen>
+
+</resources>

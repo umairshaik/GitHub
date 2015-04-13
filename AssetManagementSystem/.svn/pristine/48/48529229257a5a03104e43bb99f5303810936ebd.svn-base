@@ -1,0 +1,55 @@
+package com.bil.ams;
+
+import android.app.Activity;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.NumberPicker;
+
+import com.bil.ams.fragments.TimePickerFragment;
+
+public class SettingsMenuActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.settings_menu_activity);
+	}
+	
+	// show time picker dialog
+	public void showTimePickerDialog(View v) {
+	    DialogFragment newFragment = new TimePickerFragment(v);
+	    newFragment.show(getFragmentManager(), "timePicker");
+	}
+	
+	// when clicked on time interval
+	public void onTimeIntervalLabelClicked(View v) {
+		final Dialog d = new Dialog(this);
+		d.setTitle("NumberPicker");
+		d.setContentView(R.layout.layout_number_picker);
+		Button b1 = (Button) d.findViewById(R.id.button1);
+		final NumberPicker np = (NumberPicker) d
+				.findViewById(R.id.numberPicker);
+		np.setMaxValue(120);
+		np.setMinValue(1);
+		np.setWrapSelectorWheel(false);
+		// np.setOnValueChangedListener(this);
+
+		b1.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// EditText text = (EditText)
+				// findViewById(R.id.timeIntervallabel);
+				// text.setText(String.valueOf(np.getValue()));
+				d.dismiss();
+			}
+		});
+
+		d.show();
+
+	}
+}

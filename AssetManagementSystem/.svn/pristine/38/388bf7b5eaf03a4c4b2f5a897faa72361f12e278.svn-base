@@ -1,0 +1,42 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- application screens background -->
+    <style name="app_screen_background">
+        <item name="android:background">@color/white</item>
+        <item name="android:padding">@dimen/parent_layout_padding</item>
+    </style>
+
+    <!-- textview styles -->
+    <style name="textview_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_view_size</item>
+    </style>
+
+    <!-- textview heading styles -->
+    <style name="textview_heading_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_view_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- edittext styles -->
+    <style name="edittext_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_view_size</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ems">10</item>
+    </style>
+
+    <!-- button styles -->
+    <style name="button_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_view_size</item>
+    </style>
+
+    <!-- checkbox styles -->
+    <style name="checkbox_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_view_size</item>
+    </style>
+
+</resources>

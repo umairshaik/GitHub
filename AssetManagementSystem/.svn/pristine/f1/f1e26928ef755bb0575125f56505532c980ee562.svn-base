@@ -1,0 +1,7 @@
+package com.bil.ams.customization;
+
+public interface CustomDialogInterface {
+	void onPositiveButtonClick();
+
+	void onNegativeButtonClick();
+}
